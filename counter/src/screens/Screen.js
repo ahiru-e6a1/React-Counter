@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import "../App.css";
+// import "../App.css";
 import PlusButton from "../components/PlusButton";
 import MinusButton from "../components/PlusButton";
+import { Link } from "react-router-dom";
 
-const Screen = () => {
+export const Screen = () => {
   const [count, setCount] = useState(0);
 
   const plusButton = () => {
@@ -16,6 +17,9 @@ const Screen = () => {
 
   return (
     <div>
+      <nav>
+        <Link to="/">Main</Link>
+      </nav>
       <div className="AppContainer">
         <div className="numberArea">
           <text className="number">{count}</text>
@@ -28,5 +32,3 @@ const Screen = () => {
     </div>
   );
 };
-
-export default Screen;
